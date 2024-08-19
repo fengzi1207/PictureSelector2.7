@@ -339,18 +339,21 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
      * load All Data
      */
     private void loadAllMediaData() {
-        String[] permissions = new String[1];
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
-                getTargetSdkVersion() >= Build.VERSION_CODES.TIRAMISU) {
-            permissions[0] = Manifest.permission.READ_MEDIA_IMAGES;
+        ArrayList<String> arrayList = new ArrayList<>();
+        arrayList.add(Manifest.permission.READ_MEDIA_IMAGES);
+        arrayList.add(Manifest.permission.READ_MEDIA_VIDEO);
+        if (getTargetSdkVersion() >= Build.VERSION_CODES.TIRAMISU) {
+
         } else {
-            permissions[0] = Manifest.permission.READ_EXTERNAL_STORAGE;
+            arrayList.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
         }
-        if (PermissionChecker
-                .checkSelfPermission(this, permissions[0])) {
+        List<String> list = PermissionChecker
+                .checkMorePermissions(this, arrayList);
+        if (list.isEmpty()) {
             readLocalMedia();
         } else {
-            PermissionChecker.requestPermissions(this, permissions, PictureConfig.APPLY_STORAGE_PERMISSIONS_CODE);
+            String[] array = list.toArray(new String[0]);
+            PermissionChecker.requestPermissions(this, array, PictureConfig.APPLY_STORAGE_PERMISSIONS_CODE);
         }
     }
 

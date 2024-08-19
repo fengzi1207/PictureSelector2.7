@@ -13,6 +13,9 @@ import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author：luck
  * @date：2019-11-20 19:07
@@ -28,12 +31,36 @@ public class PermissionChecker {
      * @return
      */
     public static boolean checkSelfPermission(Context ctx, String permission) {
-        // No need to request storage perrmision for Android 13
-        if (Build.VERSION.SDK_INT >= 33 && permission == Manifest.permission.READ_EXTERNAL_STORAGE || permission == Manifest.permission.WRITE_EXTERNAL_STORAGE) {
-            return true;
-        }
         return ContextCompat.checkSelfPermission(ctx.getApplicationContext(), permission)
                 == PackageManager.PERMISSION_GRANTED;
+    }
+
+    /**
+     * 检测多个权限
+     *
+     * @return 未授权的权限
+     */
+    public static List<String> checkMorePermissions(Context context, String[] permissions) {
+        List<String> permissionList = new ArrayList<>();
+        for (int i = 0; i < permissions.length; i++) {
+            if (!checkSelfPermission(context, permissions[i]))
+                permissionList.add(permissions[i]);
+        }
+        return permissionList;
+    }
+
+    /**
+     * 检测多个权限
+     *
+     * @return 未授权的权限
+     */
+    public static List<String> checkMorePermissions(Context context, List<String> permissions) {
+        List<String> permissionList = new ArrayList<>();
+        for (int i = 0; i < permissions.size(); i++) {
+            if (!checkSelfPermission(context, permissions.get(i)))
+                permissionList.add(permissions.get(i));
+        }
+        return permissionList;
     }
 
 
