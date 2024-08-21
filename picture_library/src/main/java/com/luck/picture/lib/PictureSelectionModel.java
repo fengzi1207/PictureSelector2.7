@@ -268,9 +268,9 @@ public class PictureSelectionModel {
         } else if (selectionConfig.chooseMode == PictureMimeType.ofVideo()) {
             selectionConfig.buttonFeatures = CustomCameraType.BUTTON_STATE_ONLY_RECORDER;
         } else {
-            if (selectionConfig.ofAllCameraType == PictureMimeType.ofImage()){
+            if (selectionConfig.ofAllCameraType == PictureMimeType.ofImage()) {
                 selectionConfig.buttonFeatures = CustomCameraType.BUTTON_STATE_ONLY_CAPTURE;
-            } else if (selectionConfig.ofAllCameraType == PictureMimeType.ofVideo()){
+            } else if (selectionConfig.ofAllCameraType == PictureMimeType.ofVideo()) {
                 selectionConfig.buttonFeatures = CustomCameraType.BUTTON_STATE_ONLY_RECORDER;
             } else {
                 selectionConfig.buttonFeatures = buttonFeatures;
@@ -371,9 +371,9 @@ public class PictureSelectionModel {
 
     /**
      * @param freeStyleCropEnabled Crop frame is move ?
-     * <p>
-     *  Please Use {@link # freeStyleCropMode() }
-     * </p>
+     *                             <p>
+     *                             Please Use {@link # freeStyleCropMode() }
+     *                             </p>
      * @return
      */
     @Deprecated
@@ -384,9 +384,9 @@ public class PictureSelectionModel {
 
     /**
      * @param freeStyleCropMode Crop freeStyleCropMode
-     * <p>
-     *  Please Use {@link OverlayView.FreestyleMode #FREESTYLE_CROP_MODE_DISABLE # FREESTYLE_CROP_MODE_ENABLE # FREESTYLE_CROP_MODE_ENABLE_WITH_PASS_THROUGH}
-     * </p>
+     *                          <p>
+     *                          Please Use {@link OverlayView.FreestyleMode #FREESTYLE_CROP_MODE_DISABLE # FREESTYLE_CROP_MODE_ENABLE # FREESTYLE_CROP_MODE_ENABLE_WITH_PASS_THROUGH}
+     *                          </p>
      * @return
      */
     public PictureSelectionModel freeStyleCropMode(int freeStyleCropMode) {
@@ -576,7 +576,7 @@ public class PictureSelectionModel {
      * @return
      */
     public PictureSelectionModel maxVideoSelectNum(int maxVideoSelectNum) {
-        selectionConfig.maxVideoSelectNum = selectionConfig.chooseMode == PictureMimeType.ofVideo() ? 0 : maxVideoSelectNum;
+        selectionConfig.maxVideoSelectNum = maxVideoSelectNum;
         return this;
     }
 
@@ -1584,7 +1584,7 @@ public class PictureSelectionModel {
             if (activity == null || selectionConfig == null) {
                 return;
             }
-            if (PictureSelectionConfig.imageEngine == null){
+            if (PictureSelectionConfig.imageEngine == null) {
                 throw new NullPointerException("api imageEngine is null,Please implement ImageEngine");
             }
             Intent intent;
@@ -1623,7 +1623,7 @@ public class PictureSelectionModel {
             if (activity == null || selectionConfig == null) {
                 return;
             }
-            if (PictureSelectionConfig.imageEngine == null){
+            if (PictureSelectionConfig.imageEngine == null) {
                 throw new NullPointerException("api imageEngine is null,Please implement ImageEngine");
             }
             Intent intent = new Intent(activity, selectionConfig.camera
@@ -1653,7 +1653,7 @@ public class PictureSelectionModel {
             if (activity == null || selectionConfig == null) {
                 return;
             }
-            if (PictureSelectionConfig.imageEngine == null){
+            if (PictureSelectionConfig.imageEngine == null) {
                 throw new NullPointerException("api imageEngine is null,Please implement ImageEngine");
             }
             // 绑定回调监听
@@ -1692,7 +1692,7 @@ public class PictureSelectionModel {
             if (launcher == null || activity == null || selectionConfig == null) {
                 return;
             }
-            if (PictureSelectionConfig.imageEngine == null){
+            if (PictureSelectionConfig.imageEngine == null) {
                 throw new NullPointerException("api imageEngine is null,Please implement ImageEngine");
             }
             Intent intent;
@@ -1723,7 +1723,7 @@ public class PictureSelectionModel {
             if (activity == null || selectionConfig == null) {
                 return;
             }
-            if (PictureSelectionConfig.imageEngine == null){
+            if (PictureSelectionConfig.imageEngine == null) {
                 throw new NullPointerException("api imageEngine is null,Please implement ImageEngine");
             }
             // 绑定回调监听
