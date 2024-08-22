@@ -74,4 +74,7 @@
 
     <string name="ucrop_menu_crop">Recortar</string>
     <string name="ucrop_gif_tag">Gif</string>
+    <string name="tips">Consejos cálidos</string>
+    <string name="video_size_exceeding_25">El vídeo enviado no puede ser superior a %1$sM</string>
+
 </resources>

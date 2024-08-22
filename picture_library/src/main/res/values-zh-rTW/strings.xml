@@ -70,4 +70,7 @@
     <string name="ucrop_menu_crop">裁切</string>
 
     <string name="ucrop_gif_tag">動圖</string>
+    <string name="tips">溫馨提示</string>
+    <string name="video_size_exceeding_25">發送的視頻不能大於%1$sM</string>
+
 </resources>

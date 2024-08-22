@@ -69,4 +69,6 @@
     <string name="ucrop_label_original">Original</string>
     <string name="ucrop_menu_crop">Zuschneiden</string>
     <string name="ucrop_gif_tag">Bewegen</string>
+    <string name="tips">Erinnerung</string>
+    <string name="video_size_exceeding_25">Das gesendete Video kann nicht größer als %1$dM sein</string>
 </resources>

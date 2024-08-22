@@ -77,4 +77,7 @@
     <string name="ucrop_crop">Crop</string>
 
     <string name="ucrop_gif_tag">gif</string>
+    <string name="tips">tips</string>
+    <string name="video_size_exceeding_25">The video sent cannot be larger than%1$sM</string>
+
 </resources>

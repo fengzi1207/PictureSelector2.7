@@ -5,6 +5,17 @@
     android:background="@drawable/picture_dialog_shadow"
     android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="15dp"
+        android:paddingTop="20dp"
+        android:paddingRight="15dp"
+        android:text="@string/tips"
+        android:textColor="@color/picture_color_4d"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_content"
@@ -12,9 +23,9 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:paddingLeft="15dp"
-        android:paddingTop="35dp"
+        android:paddingTop="20dp"
         android:paddingRight="15dp"
-        android:paddingBottom="35dp"
+        android:paddingBottom="20dp"
         android:textColor="@color/picture_color_4d"
         android:textSize="15sp"
         android:textStyle="bold" />
@@ -31,7 +42,7 @@
         android:layout_height="50dp"
         android:background="@drawable/picture_btn_bottom_selector"
         android:gravity="center"
-        android:text="@string/picture_know"
-        android:textColor="@color/picture_color_9b"
+        android:text="@string/picture_confirm"
+        android:textColor="@color/picture_prompt_confirm_bg_color"
         android:textStyle="bold" />
 </LinearLayout>

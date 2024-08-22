@@ -1089,6 +1089,13 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
                     showPromptDialog(str);
                     return;
                 }
+                //视频大于25M的时候提示
+                if (PictureMimeType.isHasVideo(mimeType) && image.getSize() > 25 * 1024 * 1024) {
+                    String str = getString(R.string.video_size_exceeding_25, 25);
+                    showPromptDialog(str);
+                    return;
+                }
+
             }
         }
 

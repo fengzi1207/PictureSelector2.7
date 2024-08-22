@@ -73,4 +73,6 @@
 
     <string name="ucrop_menu_crop">قطع</string>
     <string name="ucrop_gif_tag">الصور المتحركة</string>
+    <string name="tips">نصائح دافئة</string>
+    <string name="video_size_exceeding_25">لا يمكن إرسال الفيديو أكثر من %1$s متر</string>
 </resources>

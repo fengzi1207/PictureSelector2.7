@@ -74,4 +74,7 @@
 
     <string name="ucrop_menu_crop">Recorte</string>
     <string name="ucrop_gif_tag">Gif</string>
+    <string name="tips">lembrete</string>
+    <string name="video_size_exceeding_25">O vídeo enviado não pode ser maior que%1$sM</string>
+
 </resources>

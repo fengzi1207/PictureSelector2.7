@@ -68,4 +68,7 @@
     <string name="ucrop_label_original">원본</string>
     <string name="ucrop_menu_crop">확인</string>
     <string name="ucrop_gif_tag">움직이</string>
+    <string name="tips">따뜻한 힌트</string>
+    <string name="video_size_exceeding_25">전송된 비디오는 %1$sM보다 클 수 없습니다</string>
+
 </resources>

@@ -69,4 +69,7 @@
 
     <string name="ucrop_menu_crop">切り取り</string>
     <string name="ucrop_gif_tag">gif図</string>
+    <string name="tips">暖かいヒント</string>
+    <string name="video_size_exceeding_25">送信されるビデオは%1$s5 Mより大きくすることはできません</string>
+
 </resources>
