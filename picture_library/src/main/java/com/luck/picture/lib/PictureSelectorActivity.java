@@ -340,13 +340,20 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
      */
     private void loadAllMediaData() {
         ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add(Manifest.permission.READ_MEDIA_IMAGES);
-        arrayList.add(Manifest.permission.READ_MEDIA_VIDEO);
-        if (getTargetSdkVersion() >= Build.VERSION_CODES.TIRAMISU) {
 
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            arrayList.add(Manifest.permission.READ_MEDIA_IMAGES);
+            arrayList.add(Manifest.permission.READ_MEDIA_VIDEO);
+            if (getTargetSdkVersion() >= Build.VERSION_CODES.TIRAMISU) {
+
+            } else {
+                arrayList.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+            }
         } else {
             arrayList.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
+            arrayList.add(Manifest.permission.READ_EXTERNAL_STORAGE);
         }
+
         List<String> list = PermissionChecker
                 .checkMorePermissions(this, arrayList);
         if (list.isEmpty()) {
